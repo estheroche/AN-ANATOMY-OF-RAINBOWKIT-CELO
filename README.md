@@ -138,7 +138,8 @@ After setting up these prerequisites, we can install RainbowKit-celo by using th
 ### **Step 1**: install RainbowKit-celo-
 
 ```
-npm install -g rainbow-cli
+// Install the "rainbow-cli" package globally using npm
+npm install -g rainbow-cli;
 
 ```
 The RainbowKit-celo command-line program will then be installed on our system at large.
@@ -146,9 +147,11 @@ The RainbowKit-celo command-line program will then be installed on our system at
 ### **Step 2**: Establishing a New Project-
 
 ```
-'rainbow init myproject'
+// Initialize a new project named "myproject" using the "rainbow" tool
+'rainbow init myproject';
 
-'cd myproject'
+// Change the current directory to the newly created project directory
+'cd myproject';
 
 ```
 The 'rainbow init' command can be used to start a new project with RainbowKit-celo. This program will pre-install RainbowKit-celo in a new Truffle project.
@@ -157,7 +160,10 @@ This will shift the working directory to the newly created project named myproje
 
 ### **Step 3**: Writing Smart Contract-
 
-        'truffle create contract MyContract'
+```
+// Create a new contract named "MyContract" using the Truffle framework
+'truffle create contract MyContract';
+```
 
 For popular use cases like ERC20 tokens, voting contracts, and multisig wallets, RainbowKit-celo offers a number of pre-written smart contracts. These contracts can serve as a model for our own contracts, or we can draft them from scratch.
 
@@ -167,7 +173,10 @@ The 'truffle create contract' command can be used to create a new contract.
 
 A local blockchain network is offered by RainbowKit-celo for testing and development. This network can be launched by issuing the following command:
 
-        'rainbow local'
+```
+ // Run the 'rainbow local' command
+'rainbow local';
+```
 
 Many accounts will be launched on a local blockchain network with test Celo currencies already in them (cUSD).
 
@@ -192,7 +201,9 @@ Our accounts will be shown here, along with the balances.
 The 'rainbow call' command can also be used to invoke a deployed contract's function:
 
 ```
-'rainbow call MyContract myFunction arg1 arg2'
+// Call the 'myFunction' function in the 'MyContract' contract
+// with 'arg1' and 'arg2' as arguments using the 'rainbow call' command
+'rainbow call MyContract myFunction arg1 arg2';
 
 ```
 
