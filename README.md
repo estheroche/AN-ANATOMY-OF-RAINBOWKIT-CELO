@@ -188,13 +188,13 @@ Ganache
 
 A private blockchain for testing dApps locally,
 
-Truffle, a well-liked programming framework for creating
+[Truffle](https://trufflesuite.com/), a well-liked programming framework for creating
 
 Testing smart contracts.
 
 # 3. Tools for User Interface (UI) Development
 
-Many UI development tools included in RainbowKit-Celo make it simple to construct a A user-friendly interface for a dApp can be easily created using the UI development tools included in RainbowKit-Celo. React, a well-liked JavaScript library for creating user interfaces, and Web3.js, a JavaScript library for dealing with smart contracts on the Celo network, are two examples of these technologies.
+Many UI development tools included in RainbowKit-Celo make it simple to construct a A user-friendly interface for a dApp can be easily created using the UI development tools included in RainbowKit-Celo. [React](https://react.dev/), a well-liked JavaScript library for creating user interfaces, and [Web3.js](https://web3js.org/#/), a JavaScript library for dealing with smart contracts on the Celo network, are two examples of these technologies.
 
 # 4. A mobile application development kit
 
@@ -204,11 +204,11 @@ the network of Celo applications. The pre-built mobile app templates in this kit
 
 # Celo SDK 5.
 
-Developers have access to the Celo blockchain thanks to RainbowKit-inclusion Celo's of the Celo SDK. With the help of this SDK, programmers may communicate with the Celo network, read and write data to the blockchain, send and receive transactions, and engage with smart contracts.
+Developers have access to the Celo blockchain thanks to RainbowKit-inclusion Celo's of the [Celo SDK](https://celo.org/developers). With the help of this SDK, programmers may communicate with the Celo network, read and write data to the blockchain, send and receive transactions, and engage with smart contracts.
 
 # 6. Including Celo Wallet in the mix
 
-The official wallet for the Celo network, the Celo Wallet, is integrated with RainbowKit-Celo. By this integration, dApps created with RainbowKit-Celo may quickly connect to the Celo Wallet and offer users a seamless user experience.
+The official wallet for the Celo network, the [Celo Wallet](https://celowallet.app/setup), is integrated with RainbowKit-Celo. By this integration, dApps created with RainbowKit-Celo may quickly connect to the Celo Wallet and offer users a seamless user experience.
 
 Developers have access to the Celo blockchain thanks to the inclusion of the Celo SDK in RainbowKit-Celo. With this SDK, programmers may communicate with the Celo network by sending and receiving messages, reading and writing data to the blockchain, and more.
 
