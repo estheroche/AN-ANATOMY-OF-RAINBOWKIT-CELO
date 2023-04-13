@@ -137,16 +137,20 @@ After setting up these prerequisites, we can install RainbowKit-celo by using th
 
 ### **Step 1**: install RainbowKit-celo-
 
+```
 npm install -g rainbow-cli
 
+```
 The RainbowKit-celo command-line program will then be installed on our system at large.
 
 ### **Step 2**: Establishing a New Project-
 
+```
 'rainbow init myproject'
 
 'cd myproject'
 
+```
 The 'rainbow init' command can be used to start a new project with RainbowKit-celo. This program will pre-install RainbowKit-celo in a new Truffle project.
 
 This will shift the working directory to the newly created project named myproject.
@@ -187,7 +191,10 @@ Our accounts will be shown here, along with the balances.
 
 The 'rainbow call' command can also be used to invoke a deployed contract's function:
 
+```
 'rainbow call MyContract myFunction arg1 arg2'
+
+```
 
 ## 11.0 Architecture of RainbowKit-Celo:
 
