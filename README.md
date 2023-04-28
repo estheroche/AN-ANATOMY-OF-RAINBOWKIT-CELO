@@ -231,4 +231,4 @@ For developers looking to create decentralized applications for the Celo network
 
 The primary characteristics of RainbowKit-Celo, such as the pre-built templates, the Celo SDK, and the interface with the Celo Wallet, were discussed in this article. To help you understand how RainbowKit-Celo can be used to create a dApp on the Celo network, we have also supplied some code excerpts.
 
-Check out RainbowKit-Celo if you're thinking about developing a dApp for the Celo network, and get to work on it right now.
+Check out RainbowKit-Celo if you're thinking about developing a dApp for the Celo network, and get to work on it right now!!
