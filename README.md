@@ -1,220 +1,288 @@
-# 1.0 AN ANATOMY OF RAINBOWKIT-CELO
+# Building a Smart Contract with Celo Rainbowkit
 
-A robust and adaptable development kit created exclusively for the Celo blockchain is called RainbowKit-Celo. The kit offers developers a comprehensive collection of tools and resources to create decentralized apps (dApps) on the Celo network. It is developed and maintained by the Celo team. We will thoroughly examine the RainbowKit-Celo in this post, as well as its features, architecture, and code samples.
+## Table of Contents
 
-In this tutorial it is important to understand some certain concept in ranbowkit-celo so as to flow with the tutorial. These concept will be explained below.
+- [Building a Smart Contract with Celo Rainbowkit]()
+- [Introduction](#introduction)
+  .[What is Celo?](#what-is-celo?)
+  .[What is Celo-Rainbow-kit](#what-is-celo-rainbow-kit?)
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
 
-# 2.0 WHAT IS CELO?
+  . [Step 1: Setting up the Rainbow CLI](#step-1-setting-up-the-rainbow-cli)
+
+  . [Step 2: Connecting the Rainbowkit](#connecting-the-rainbowkit)
+
+  . [Step 3: Creating a Smart Contract](#creating-a-smart-contract)
+
+  . [Step 4: Compiling and Deploying the Smart Contract](#compiling-and-deploying-the-smart-contract)
+
+- [Conclusion](#conclusion)
+
+## Introduction
+
+Decentralized applications are becoming increasingly popular, and smart contracts are at the core of these applications. Celo is a platform that makes it easy for developers to build and deploy decentralized applications. RainbowKit is a JavaScript library that provides a simple and convenient way to interact with Ethereum-based blockchains, including Celo. Hardhat is a development environment for building and testing Ethereum-based applications. In this tutorial, we'll walk through the process of building a simple smart contract using RainbowKit with Hardhat on Celo.
+
+### What is Celo?
 
 Celo is a mobile-first blockchain with a focus on building an accessible, green financial system. In response to the numerous difficulties that well-known blockchains like Bitcoin and Ethereum are experiencing, the Celo blockchain was created. Currency with a Steady Value The price volatility of cryptocurrencies is a significant barrier to their widespread use as a means of exchange and accessibility. A expanding family of stablecoins, including cUSD, cEUR, cREAL, and USDC, are offered by Celo. These coins have a stable value and can even be used to pay transaction fees. The consensus processes used by Proof-of-Stake Bitcoin take a great deal of energy and result in expensive and frequently delayed transactions.
 By mapping customers' phone numbers to their public keys, Celo enables users to send cryptocurrency using only their phone numbers. EVM Compatibility in Full In addition to allowing programmers to use the well-liked Solidity smart contract language, Celo is fully EVM compliant. This means that ERC-20 or ERC721-compliant tokens and Ethereum's tooling can both be used in the Celo ecosystem (NFT).
 
-# 3.0 WHAT IS RAINBOWKIT?
+### What is Celo-Rainbow-kit
 
 A development kit called RainbowKit-celo enables programmers to create decentralized applications (dApps) quickly and easily on the Celo blockchain. An open-source blockchain technology called Celo wants to build an inclusive financial system. On top of Celo, RainbowKit-celo offers developers a collection of tools and resources to create dApps that can communicate with the Celo blockchain.
 A development kit called RainbowKit-Celo enables programmers to create and launch decentralized applications (dApps) on the Celo network. It offers a full suite of tools and resources to developers, streamlining the development process and lowering the time and effort required to create dApps on Celo.
 
-Truffle and Solidity are just two of the well-known development tools that are incorporated into RainbowKit-Celo. It also comes with a collection of pre-made smart contracts that may be altered to fit the requirements of a particular dApp.
+RainbowKit has several advantages that make it an attractive choice for developers building smart contracts on the Celo network. Here are a few of its benefits:
 
-Being open-source, RainbowKit-code Celo's is available for anybody to access and alter as desired. This makes it the perfect development kit for programmers who wish to alter the performance and functionality of their dApps.
-To make the development process simpler, RainbowKit-celo offers a number of capabilities, including:
+1. Ease of Use: RainbowKit is designed to be easy to use, even for developers who are new to smart contract development. It includes a number of helpful features, such as a built-in development environment, that make it easy to get started.
 
-a collection of ready-made smart contracts for typical application scenarios
-a neighborhood blockchain network for development and testing
-A streamlined method for introducing smart contracts onto the Celo network
-a set of tools for communicating with the blockchain via the command line.
+2. Security: RainbowKit is designed with security in mind. It includes a number of built-in security features, such as contract testing tools, that can help developers catch potential security vulnerabilities before they become a problem.
 
-# 4.0 WHAT IS SMART CONTRACT?
+3. Compatibility: RainbowKit is designed to be compatible with a wide range of smart contract platforms, including Celo. This makes it a versatile tool that can be used to build smart contracts for a variety of use cases.
 
-When specific preset criteria are satisfied, a smart contract is a computer software that automatically carries out the provisions of a contract. A blockchain, a decentralized digital ledger that enables safe and open record-keeping, is often where these contracts are kept.
+4. Community Support: RainbowKit has a strong and active community of developers who contribute to its development and provide support for users. This can be especially helpful for new developers who are learning the ropes of smart contract development.
 
-Once they are put up, smart contracts are self-executing and run without the need for human involvement. They can be used to automate a wide range of activities, including financial transactions, the exchange of property, and the transmission of information. They are programmed to enforce the terms and conditions of the contract.
+## Prerequisites
 
-The main benefit of smart contracts is that they can significantly minimize the need for middlemen and other third-party middlemen, such as attorneys and banks, which can lead to quicker and more affordable transactions.
+Before we get started, here are the prerequisites:
 
-They can also improve security and transparency because the contract's terms are stored on the blockchain, where they are immutable and impervious to tampering.
+1.  A computer running Windows, macOS, or Linux
 
-# 5.0 WHAT DOES DEPLOYING SMART CONTRACT?
+2.  A Celo account and wallet (you can create one at celo.org)
 
-We will give an overview of RainbowKit-celo in this article and show you how to use it to create and implement smart contracts on the Celo network.
+3.  Basic knowledge of JavaScript and Solidity
 
-In this post, we'll look into RainbowKit-features, celo's operation, and application development capabilities on the Celo blockchain.
+4.  An internet connection
 
-# 6.0 FEATURES OF RAINBOWKIT
+## Getting Started
 
-RainbowKit-celo provides developers with a range of features that make it easy to build DApps on the Celo blockchain. Some of the key features of RainbowKit-celo include:
+### Step 1: Setting up the Rainbow CLI
 
-# 1. Celo blockchain integration
+The first step is to set up the Rainbow CLI, which is a command-line interface that enables you to interact with the Rainbowkit and deploy smart contracts to the Celo blockchain. To install the Rainbow CLI, follow these steps:
 
-Developers can interface their DApps well with Celo blockchain using the tools and resources that RainbowKit-celo offers. This includes the capability to use different programming languages, such like JavaScript and Solidity, to interface with the Celo blockchain.
+1. Install Node.js and NPM (if you haven't already).
+2. Open a terminal window and run the following command to install the Rainbow CLI:
 
-# 2. Smart contract development
+```bash
+npm install -g @celo/celocli
+```
 
-In order to assist developers in creating smart contracts for building DApps, RainbowKit-celo offers a variety of tools and resources. This consists of a Solidity compiler, a tool for deploying contracts, and a framework for testing smart contracts.
+3. Once the installation is complete, run the following command to log in to your Celo account:
 
-# 3. Wallet integration
+```bash
+celocli account:login
+```
 
-Developers can integrate their DApps using Celo wallets using a variety of tools and resources that RainbowKit-celo offers. This includes having the option to use different programming languages, like JavaScript, to communicate with Celo wallets.
+4. Follow the prompts to enter your account information and set up your account.
 
-# 4. Identity management
+### Step 2: Connecting the Rainbowkit
 
-Developers can use a variety of tools and resources through RainbowKit-celo to manage user information on the Celo blockchain. This encompasses both the capability to authenticate users and the capability to generate and manage user identities.
+The next step is to connect the Rainbowkit to your computer. To do this, follow these steps:
 
-# 5. Payment processing
+1. Connect the Rainbowkit to your computer using the USB cable.
+2. Open a terminal window and run the following command to verify that the Rainbowkit is connected: run the command below;
 
-Developers can access a variety of tools and resources using RainbowKit-celo to facilitate payment processing on the Celo blockchain. Payments can be sent and received using a variety of programming languages, including JavaScript.
+`bash
+celocli rainbow:status`
 
-# 7.0 BENEFITS OF RAINBOWKIT-CELO
+If the Rainbowkit is connected, you should see a message indicating that the Rainbowkit is connected and the firmware version.
 
-A variety of advantages offered by RainbowKit-celo to developers make it simple to create DApps mostly on Celo network. The following are a few of RainbowKit-main celo's advantages:
+### Step 3: Creating a Smart Contract
 
-# 1. EASY TO USE
+Now that you have a Hardhat project set up, you need to create a new smart contract.
 
-Even for developers with no prior experience in blockchain development, RainbowKit-celo is made to be simple to use. To assist developers in getting started, the kit includes a variety of tutorials and documentation. Moreover, the user interface is created to be simple and easy to use.
+```solidity
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.9;
 
-# 2. Comprehensive
+contract CohortBank {
 
-A thorough BDK that offers a variety of resources and tools to help developers create DApps here on Celo blockchain is called RainbowKit-celo. This covers everything, from wallet integration tools to tools for developing smart contracts.
+    uint256 public unlockTime;
+    mapping(address => uint256) public balances;
+    uint256 public totalCohortBalance;
 
-# 3. Customizable
+    address payable public owner;
 
-Due of RainbowKit-great celo's degree of adaptability, developers may employ the kit to create DApps that are tailored to their unique requirements. The kit is made to be adaptable, and it is simple to add fresh functionality and features to it.
+    event Deposit(uint256 amount, uint256 when, address caller);
+    event Withdrawal(uint256 amount, uint256 when);
 
-# 4. Secure
 
-With built-in security devices that assist defend against typical security risks, RainbowKit-celo is made with security in mind. To keep it secure and current, the kit is also frequently updated.
+    constructor(uint256 _unlockTime) payable {
+        require(
+            block.timestamp < _unlockTime,
+            "Unlock time should be in the future"
+        );
 
-# 8.0 HOW RAINBOWKIT-CELO WORK
+        unlockTime = _unlockTime;
+        owner = payable(msg.sender);
+    }
 
-The RainbowKit-celo blockchain is constructed on top of Celo. It offers a collection of information and tools to developers to make it simple for them to create dApps that can communicate with the Celo blockchain.
+  function deposit() public payable {
+         unlockTime, block.timestamp);
+        require(msg.value > 0, "cannot deposit 0 amount");
+        balances[msg.sender] += msg.value;
+        totalCohortBalance += msg.value;
 
-A straightforward and user-friendly method for developers to create decentralized applications (dApps) on the Celo blockchain is offered by RainbowKit-celo, which combines web3.js, a JavaScript library for dealing with Ethereum-compatible blockchains, and Celo's client SDK.
+        emit Deposit(msg.value, block.timestamp, msg.sender);
+    }
 
-Moreover, RainbowKit-celo offers wallet connectivity for the Celo Wallet. By using dApps created using RainbowKit-celo, users may safely manage their Celo assets.
+    function withdraw() public {
+        require(block.timestamp >= unlockTime, "You can't withdraw yet");
+        require(msg.sender == owner, "You aren't the owner");
 
-# 9.0 Using Rainbowkit-Celo to build DAPP
+        emit Withdrawal(address(this).balance, block.timestamp);
 
-A few easy actions must be taken by developers in order to use RainbowKit-celo to create dApps:
+        owner.transfer(address(this).balance);
+    }
+}
+```
 
-Create a development environment: To create dApps on the Celo blockchain, developers must first create a development environment. Installing the necessary software and libraries, such as web3.js and the Celo client SDK, is usually required.
+This is a smart contract written in Solidity, a programming language used for creating smart contracts on the Ethereum blockchain. Let's go through the code and understand it step by step:
 
-Choose a development framework: When creating dApps on the Celo blockchain, developers have a variety of development frameworks to select from. The widely used frameworks React and Vue.js.
+`contract CohortBank {`
 
-Create and test the dApp: With RainbowKit-developer celo's tools, developers can begin constructing and testing their dApp once the development environment and framework have been configured.
+This line declares a new contract called "CohortBank".
 
-# 10.0 Getting started with RainbowKit-celo
+`uint256 public unlockTime;`
 
-The following prerequisites need to be installed in order to launch RainbowKit-celo:
+This line declares a public state variable called "unlockTime" of type uint256, which will hold the timestamp when the contract will be unlocked and withdrawals will be allowed.
 
-Node.js (v10.0.0 or later) (v10.0.0 or later);
+`mapping(address => uint256) public balances;`
 
-Truffle (v5.0.0 or later) (v5.0.0 or later);
+This line declares a public mapping called "balances" which will store the balances of each address that deposits funds into the contract.
 
-Node.js (version 12 or higher)
+`uint256 public totalCohortBalance;`
 
-Solidity (version 0.8 or higher)
+This line declares a public state variable called "totalCohortBalance" of type uint256, which will store the total amount of funds deposited by all addresses.
 
-Celo CLI (version 1 or higher)
+`address payable public owner;`
 
-Git
+This line declares a public state variable called "owner" of type address payable, which will hold the address of the contract owner who can withdraw the funds.
 
-After setting up these prerequisites, we can install RainbowKit-celo by using the command below:
+`event Deposit(uint256 amount, uint256 when, address caller);`
 
-# step 1: install RainbowKit-celo
+This line declares an event called "Deposit", which will be emitted whenever someone deposits funds into the contract. It will contain the amount deposited, the timestamp of the deposit, and the address of the caller.
 
-npm install -g rainbow-cli
+`event Withdrawal(uint256 amount, uint256 when);`
 
-The RainbowKit-celo command-line program will then be installed on our system at large.
+This line declares an event called "Withdrawal", which will be emitted whenever the owner withdraws funds from the contract. It will contain the amount withdrawn and the timestamp of the withdrawal.
 
-# step 2: Establishing a New Project
+`constructor(uint256 _unlockTime) payable {
+    require(
+block.timestamp < _unlockTime,
+ "Unlock time should be in the future"
+    );`
 
-'rainbow init myproject'
+`unlockTime = _unlockTime;
+owner = payable(msg.sender);
+}`
 
-'cd myproject'
+This is the constructor function which is called when the contract is deployed. It takes an argument called "\_unlockTime" which will set the unlock time for the contract. It also checks that the unlock time is in the future, and sets the "unlockTime" and "owner" variables.
 
-The 'rainbow init' command can be used to start a new project with RainbowKit-celo. This program will pre-install RainbowKit-celo in a new Truffle project.
+`function deposit() public payable {
+    require(msg.value > 0, "cannot deposit 0 amount");
+    balances[msg.sender] += msg.value;
+    totalCohortBalance += msg.value;`
 
-This will shift the working directory to the newly created project named myproject.
+`emit Deposit(msg.value, block.timestamp, msg.sender);
+}`
 
-# step 3: Writing Smart Contract
+This function allows anyone to deposit funds into the contract. It requires that the deposited amount is greater than zero, updates the balances of the depositor and the total cohort balance, and emits a "Deposit" event.
 
-        'truffle create contract MyContract'
+`function withdraw() public {
+    require(block.timestamp >= unlockTime, "You can't withdraw yet");
+    require(msg.sender == owner, "You aren't the owner");`
 
-For popular use cases like ERC20 tokens, voting contracts, and multisig wallets, RainbowKit-celo offers a number of pre-written smart contracts. These contracts can serve as a model for our own contracts, or we can draft them from scratch.
+`emit Withdrawal(address(this).balance, block.timestamp);`
 
-The 'truffle create contract' command can be used to create a new contract.
+` owner.transfer(address(this).balance);
+}`
 
-# step 4: Testing Smart Contract
+This function allows the owner to withdraw funds from the contract. It requires that the unlock time has passed and that the caller is the owner. It emits a "Withdrawal" event, and transfers the entire balance of the contract to the owner's address.
 
-A local blockchain network is offered by RainbowKit-celo for testing and development. This network can be launched by issuing the following command:
+## Step 3: COMPILE AND DEPLOY SMART CONTRACT
 
-        'rainbow local'
+Now that our smart contract is ready, we can compile and deploy it to the Celo network. To do this, we will use Hardhat, which is a development environment for building, testing, and deploying smart contracts.
 
-Many accounts will be launched on a local blockchain network with test Celo currencies already in them (cUSD).
+a. Compile the Smart Contract
 
-The truffle test command can be used to verify our smart contracts. Using this command, the neighborhood blockchain network will be used to execute our tests.
+In your terminal, run the following command to compile the smart contract:
 
-# step 5: Deloying Smart Contract
+```solidity
+        npx hardhat compile
+```
 
-We must first register a Celo account and acquire some test cUSD before we can release our smart contracts to the Celo network. Afterwards, to deploy our contracts, we may use the command:
+This command will create a build directory containing the compiled smart contract. You can view the compiled smart contract in the build/contracts directory.
 
-        'rainbow deploy'
+b. Deploy the Smart Contract
 
-The contract addresses will be returned along with the deployment of our contracts to the Celo network.
+To deploy the smart contract, we need to configure Hardhat to connect to the Celo network. Create a .env file in the root directory of your project and add the following variables:
 
-# step 6 : Interacting with Smart Contract
+```
+  PRIVATE_KEY=<your_private_key>
+  CELO_RPC=<celo_rpc_endpoint>
+```
 
-A set of command-line tools are provided by RainbowKit-celo for interfacing with the Celo blockchain. To list our Celo accounts, for instance, we may use the 'rainbow accounts' command:
+Replace <your_private_key> with the private key you generated earlier, and <celo_rpc_endpoint> with the RPC endpoint of the Celo network you want to deploy to.
 
-        'rainbow accounts'
+In this tutorial, we will use the alfajores test network, so the CELO_RPC variable should be set to:
 
-Our accounts will be shown here, along with the balances.
+```dotnetcli
+ https://alfajores-forno.celo-testnet.org
+```
 
-The 'rainbow call' command can also be used to invoke a deployed contract's function:
+Next, update the hardhat.config.js file to use the Celo network. Add the following code to the networks object:
 
-'rainbow call MyContract myFunction arg1 arg2'
+```solidity
+celo: {
+  url: process.env.CELO_RPC,
+  chainId: 44787,
+  gas: 6000000,
+  gasPrice: 20000000000, // 20 gwei
+  accounts: [`0x${process.env.PRIVATE_KEY}`]
+}
+```
 
-# 11.0 ARCHITECTURE OF RAINBOW-CELO
+This code configures Hardhat to use the Celo network with the CELO_RPC endpoint and the PRIVATE_KEY variable.
 
-A modular design underlies RainbowKit-construction, Celo's and it consists of a number of parts that work together to support dApp development on the Celo network. One of these elements is smart contracts.
+Now, let's deploy the smart contract to the Celo network. In your terminal, run the following command:
 
-Pre-built smart contracts are provided by RainbowKit-Celo as a framework for dApp development. Solidity, a well-liked programming language for creating smart contracts on the Ethereum network, is used to create these smart contracts.
+```bash
+npx hardhat run --network celo scripts/deploy.js
+```
 
-# 2. Tools for Development
+This command will deploy the smart contract to the Celo network and output the address of the deployed contract. Save this address as we will need it in the next step.
 
-Many development tools that are part of RainbowKit-Celo make it simple to create and test dApps on the Celo network. Notable tools include
+Now that the smart contract is deployed, we can interact with it using the Celo wallet.
 
-Ganache
+a. Connect to the Celo Wallet
 
-A private blockchain for testing dApps locally,
+Open the Celo wallet on your browser and connect to the alfajores test network. You can do this by clicking on the network dropdown in the top-right corner of the wallet and selecting Alfajores.
 
-[Truffle](https://trufflesuite.com/), a well-liked programming framework for creating
+b. Add the Smart Contract
 
-Testing smart contracts.
+Click on the Add Contract button on the left sidebar of the wallet. Enter the following details:
 
-# 3. Tools for User Interface (UI) Development
+```
+ Contract Address: The address of the deployed smart contract.
+ Contract Name: CohortBank
+ Contract ABI: The JSON ABI of the smart contract. You can find this in the build/contracts directory.
+```
 
-Many UI development tools included in RainbowKit-Celo make it simple to construct a A user-friendly interface for a dApp can be easily created using the UI development tools included in RainbowKit-Celo. [React](https://react.dev/), a well-liked JavaScript library for creating user interfaces, and [Web3.js](https://web3js.org/#/), a JavaScript library for dealing with smart contracts on the Celo network, are two examples of these technologies.
+Click on Add Contract to add the smart contract to your wallet.
 
-# 4. A mobile application development kit
+c. Interact with the Smart Contract
 
-It is simple to create and deploy mobile applications with RainbowKit-mobile Celo's app development kit.
+Now that the smart contract is added to your wallet, you can interact with it by clicking on the contract in the left sidebar.
 
-the network of Celo applications. The pre-built mobile app templates in this kit can be altered to fit the requirements of a particular dApp.
+You can deposit funds to the smart contract by clicking on the deposit button and entering the amount of funds you want to deposit.
 
-# Celo SDK 5.
+You can also withdraw funds from the smart contract by clicking on the withdraw button. However, you can only withdraw funds after the unlock time has passed and you are the owner of the smart contract.
 
-Developers have access to the Celo blockchain thanks to RainbowKit-inclusion Celo's of the [Celo SDK](https://celo.org/developers). With the help of this SDK, programmers may communicate with the Celo network, read and write data to the blockchain, send and receive transactions, and engage with smart contracts.
+Congratulations! You have successfully built a smart contract using RainbowKit and deployed it to the Celo network.
 
-# 6. Including Celo Wallet in the mix
-
-The official wallet for the Celo network, the [Celo Wallet](https://celowallet.app/setup), is integrated with RainbowKit-Celo. By this integration, dApps created with RainbowKit-Celo may quickly connect to the Celo Wallet and offer users a seamless user experience.
-
-Developers have access to the Celo blockchain thanks to the inclusion of the Celo SDK in RainbowKit-Celo. With this SDK, programmers may communicate with the Celo network by sending and receiving messages, reading and writing data to the blockchain, and more.
-
-# Conclusion
-
-A straightforward and effective development environment is offered by RainbowKit-celo for creating dApps here on Celo network. Esther Aladi Oche, a local blockchain network, completes it with pre-written smart contracts.
+## Step 4: CONCLUSION
 
 RainbowKit-celo can assist developers in quickly and efficiently building and deploying decentralized applications on the Celo blockchain thanks to testing and development, a streamlined deployment process, and a suite of command-line tools.
 
